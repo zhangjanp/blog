@@ -13,4 +13,4 @@ lib
 .vscode
 .npmrc
 .envrc
-docs/.vuepress
+dist

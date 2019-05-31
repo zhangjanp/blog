@@ -10,6 +10,9 @@ if [ "$ROT_TOKEN" = "" ]; then
 fi
 git clone https://$ROT_TOKEN@github.com/zhangjanp/blog.git "blog" && cd blog
 
+# install 
+npm run bootstrap
+
 # 构建
 npm run docs:build
 

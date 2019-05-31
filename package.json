@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "bootstrap": "yarn || npm i",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
