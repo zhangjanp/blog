@@ -17,13 +17,16 @@ npm run docs:build
 # 进入生成的构建文件夹
 cd docs/.vuepress/dist
 
+git init
+git remote add origin https://$ROT_TOKEN@github.com/zhangjanp/zhangjanp.github.io.git
+
 # 如果你是要部署到自定义域名
 # echo 'www.example.com' > CNAME
 
 git add -A
 git commit -m 'deploy'
 
-git push -f origin master
+git push -f origin gh-pages
 
 cd -
 
