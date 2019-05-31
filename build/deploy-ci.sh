@@ -8,8 +8,7 @@ if [ "$ROT_TOKEN" = "" ]; then
   echo "Bye~"
   exit 0
 fi
-
-git clone https://$ROT_TOKEN@github.com/zhangjanp/zhangjanp.github.io.git && cd zhangjanp.github.io
+git clone https://$ROT_TOKEN@github.com/zhangjanp/blog.git "blog" && cd blog
 
 # 构建
 npm run docs:build
@@ -18,7 +17,8 @@ npm run docs:build
 cd docs/.vuepress/dist
 
 git init
-git remote add origin https://$ROT_TOKEN@github.com/zhangjanp/zhangjanp.github.io.git
+git checkout -b gh-pages
+git remote add origin https://$ROT_TOKEN@github.com/zhangjanp/blog.git
 
 # 如果你是要部署到自定义域名
 # echo 'www.example.com' > CNAME
