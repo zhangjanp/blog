@@ -2,9 +2,11 @@
   "scripts": {
     "bootstrap": "yarn || npm i",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "NODE_ENV=production vuepress build docs"
   },
   "devDependencies": {
+    "@vuepress/theme-blog": "^2.1.0",
     "vuepress": "^1.3.1"
-  }
+  },
+  "dependencies": {}
 }
