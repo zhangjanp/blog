@@ -1,0 +1,39 @@
+@page {
+  size: A4 portrait;
+}
+
+#header-wrapper, #mobile-header, .footer {
+  display: none !important;
+}
+
+.content-wrapper {
+  padding: 0;
+}
+
+.content__default ul:first-of-type {
+  padding-left: 5px;
+}
+
+.content__default ul:first-of-type li {
+  display: inline-block;
+  width: 320px;
+}
+
+.content__default ul:first-of-type li a svg{
+  display: none;
+}
+
+.content__default ul:first-of-type p,
+.content__default ul:last-of-type {
+  margin: 0 !important;
+}
+
+.content__default p:last-of-type {
+  margin: 5px 0;
+}
+
+.content__default:not(.custom) > h1, .content__default:not(.custom) > h2, .content__default:not(.custom) > h3, .content__default:not(.custom) > h4, .content__default:not(.custom) > h5, .content__default:not(.custom) > h6 {
+  margin-top: calc(0.5rem - 80px);
+  padding-top: calc(65px + 1rem);
+  margin-bottom: 0;
+}
