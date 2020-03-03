@@ -1,0 +1,12 @@
+.content__default ul:first-of-type {
+  padding-left: 5px;
+}
+
+.content__default ul:first-of-type li {
+  display: inline-block;
+  width: 340px;
+}
+
+.content__default ul:first-of-type li p {
+  margin: 5px 0;
+}
