@@ -19,7 +19,7 @@ module.exports = {
     nav: [
       {
         text: "About",
-        link: "/me/"
+        link: "/me.html"
       },
       {
         text: "Github",
