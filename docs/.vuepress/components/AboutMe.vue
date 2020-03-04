@@ -6,7 +6,11 @@
 class Typer {
   constructor(text, config, cb) {
     this.text = text;
-    this.config = Object({ typeDelay: 200, deleteDelay: 70, delDelimiters: '()' }, config, cb);
+    this.config = Object({
+      typeDelay: 200,
+      deleteDelay: 70,
+      delDelimiters: '()',
+    }, config);
     this.cb = cb;
     this.texts = [];
     this.textsIndex = 0;
@@ -24,14 +28,13 @@ class Typer {
     const regexEscapeRE = /[-.*+?^${}()|[\]\/\\]/g;
     const open = delDelimiters[0].replace(regexEscapeRE, '\\$&');
     const close = delDelimiters[1].replace(regexEscapeRE, '\\$&');
-    const delReg = new RegExp(`(${open}(?:.|\\n)+?${close})`, 'g')
+    const delReg = new RegExp(`(${open}(?:.|\\n)+?${close})`, 'g');
+
     this.texts = text.split(delReg)
-      .map((v) => {
-        return {
+      .map(v => ({
           msg: v,
           delete: !!v.match(delReg),
-        };
-      })
+      }))
       .filter(v => v.msg !== '');
   }
 
