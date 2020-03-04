@@ -52,5 +52,13 @@ module.exports = {
     },
     smoothScroll: true,
     lastUpdated: 'Last Updated', // string | boolean
-  }
+  },
+  plugins: [
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-159668426-1'
+      }
+    ]
+  ]
 }
