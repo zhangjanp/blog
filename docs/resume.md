@@ -8,20 +8,16 @@ meta:
   - name: viewport
     content: width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no
 ---
-<link rel="stylesheet" type="text/css" :href="$withBase('/resume.css')" />
+
 <link rel="stylesheet" type="text/css" media="print" :href="$withBase('/resume-print.css')" />
 
-# 个人信息
 
- - 张建平/男/1993
- - 技术博客：[https://zhangjanp.github.io/blog](https://zhangjanp.github.io/blog)
- - 本科/仲恺农业工程学院/通信工程
- - Github：[http://github.com/zhangjanp](http://github.com/zhangjanp)
-
- - 工作年限：3年
- - 期望职位：中级前端工程师
- - 联系方式：1882-6233-661
- - 期望薪资：17k~25k
+<header class="info">
+  <h3>张建平 | <a href="https://zhangjanp.github.io/blog/me.html">Janp</a></h3>
+  <p>本科/仲恺农业工程学院/通信工程</p>
+  <p><a href="tel:18826233661">1882-6233-661</a> | <a href="mailto:zhang_janp@163.com">zhang_janp@163.com</a></p>
+  <p>中级前端工程师</p>
+</header>
 
 ---
 
