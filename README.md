@@ -1,7 +1,3 @@
-<p align="center">
-  <a href="https://travis-ci.org/zhangjanp/blog">
-    <img src="https://travis-ci.org/zhangjanp/blog.svg?branch=master">
-  </a>
-</p>
+![CI](https://github.com/zhangjanp/blog/workflows/CI/badge.svg)
 
 ### 静态博客
