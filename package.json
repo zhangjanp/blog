@@ -5,7 +5,6 @@
     "docs:build": "NODE_ENV=production vuepress build docs"
   },
   "devDependencies": {
-    "@vuepress/plugin-google-analytics": "1.9.9",
     "@vuepress/theme-blog": "2.3.3",
     "vuepress": "1.9.9"
   },

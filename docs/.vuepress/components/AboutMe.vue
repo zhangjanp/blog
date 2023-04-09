@@ -1,5 +1,5 @@
 <template>
-  <p>{{ introduction }}</p>
+  <p v-html="introduction"></p>
 </template>
 
 <script>
@@ -43,7 +43,14 @@ class Typer {
     const { typeDelay } = config;
 
     const msg = texts[textsIndex].msg;
-    this.cb(this.typedText + msg.slice(0, this.letterIndex++));
+    let newText = this.typedText + msg.slice(0, this.letterIndex++)
+
+    const shouldBr = newText.slice(-1) === '<' && msg.slice(0, this.letterIndex + 3).slice(-5) === '<br/>'
+    if (shouldBr) {
+      newText = this.typedText + msg.slice(0, this.letterIndex + 3)
+      this.letterIndex += 3
+    }
+    this.cb(newText);
 
     if (this.letterIndex > msg.length) {
       if (texts[textsIndex].delete) {
@@ -92,8 +99,13 @@ export default {
   },
 
   mounted() {
-    const text = `嗨，我叫建平，中级前端工程师，喜欢踢球，人称“(进攻终结者)拼命三郎防守哥”，我的位置是边后卫。`
-    const paidInternetTroll = new Typer(text, {}, (text) => {
+    const text = `嗨，很高兴认识你～
+    <br />
+    我叫阿平，前端工程师，喜欢踢球，人称“(进攻终结者)拼命三郎防守哥”，我的位置是边后卫。
+    <br />
+    今天愉快～
+    `
+    const paidInternetTroll = new Typer(text.replace(/(\n|\s+)/g, ''), {}, (text) => {
       this.introduction = text;
     });
   },

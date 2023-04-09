@@ -45,7 +45,7 @@ module.exports = {
       ],
       copyright: [
         {
-          text: "Janp © 2020",
+          text: "Janp © 2023",
           link: "./"
         }
       ]
@@ -53,12 +53,14 @@ module.exports = {
     smoothScroll: true,
     lastUpdated: 'Last Updated', // string | boolean
   },
-  plugins: [
-    [
-      '@vuepress/google-analytics',
-      {
-        'ga': 'UA-159668426-1'
-      }
-    ]
-  ]
+  head:[['script', {}, `
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c54dadf87918d953e0c4aa0210131ab2";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+     `
+]],
 }
